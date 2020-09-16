@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>微软五笔码表编辑器</title>
+    </head>
+    <body>
+        <p>此程序用于替换Windows 8.1/10中微软五笔的码表，以使你可以使用自己习惯的码表。</p>
+        <p>说明</p>
+        <ol>
+            <li>微软五笔最长只支持4码，且不支持z键。这是软件本身限制，本人无法改进。</li>
+            <li>码表格式可参见后文附图，编码在前，词条在后，词条与编码、编码与编码用空格分隔。如果你的码表不是这种格式，请先将其转为此格式，可以考虑使用<a href="http://chinput.com/article-6-1.html">多多码表编辑器</a>。</li>
+            <li>为了安装成功，请确保微软五笔未处于使用状态，否则安装程序会因码表被锁定而失败。建议您先将微软五笔卸载，重启Windows，然后再运行本程序，安装完码表后再重新装上微软五笔。</li>
+            <li>下面的附图是v1.0的，但软件已更新至v1.1，主要改进了提示消息，及添加对Windows 10周年版的支持。</li>
+        </ol>
+        <p>看下图，作者已将系统码表替换为新世纪五笔单字版。</p>
+        <p><img src="Images/ItWorks_Proof.png" width="650"/></p>
+        <p>程序主界面：</P>
+        <p><img src="Images/MainUI.png" width="400"/></p>
+        <p>用法：<p>
+        <ol>
+            <li>点“加载...”将码表加载到程序。</li>
+            <li>点“安装...”将码表安装到系统。</li>
+            <li>现在你切换到“微软五笔”，会现现码已经变成你加载的码表了。</li>
+            <li>你也可以点“保存...”将转换好的二进制格式的微软码表保存起来，供以后加载。</li>
+        </ol>
+        <p>注意：本程序需要.NET Framework 4.5才能运行，请在Windows 8.1/10控制面板中将.NET Framework打开。</p>
+        <p>注意：安装码表到系统需要在Windows 8.1/10上才能成功，且需要管理员权限。</p>
+        <p>程序支持加载两格式的码表。</p>
+        <ul>
+            <li>
+                可以是二进制格式，这是本程序生成的，或微软五笔自带的*.lex文件。请确保加载的二进制码表没有损坏，否则安装后可能发生不可预知的错误。
+            </li>
+            <li>
+                可以是文本格式。使用类似于QQ五笔的格式，请以Unicode方式保存。参考下图的说明和Tables中的示例码表。
+                <br/><img src="Images/Text_Format.png" width="650"/>
+            </li>
+        </ul>
+        <p>为方便使用，及起示例作用，程序已自带3套五个码表，它们在Tables下面。另外为起备份作用，附带了微软五笔自带的码表，取名ChsWubi.backup.lex/ChsWubiNew.backup.lex。</p>
+        <ol>
+            <li>
+                极点极爽词库4.3版_修订版（其中“修订”指改了符号的编码，见后面的说明）
+                <br/><img src="Images/JidianWubi_Setup.png" width="450"/>
+            </li>
+            <li>
+                Windows经典五笔输入法小词库86版和98版
+                <br/><img src="Images/WinWubi_Setup.png" width="250"/>
+            </li>
+            <li>
+                取自大一统2014的新世纪五笔词组版和单字版
+                <br/><img src="Images/WangmaWubi_Setup.png" width="450"/>
+            </li>
+        </ol>
+        <p>各码表仅限个人使用，版权归原软件公司所有，不得用于商业目的。</p>
+        <p>关于符号编码的说明</p>
+        <p>由于不能以“z”开头，所以将引导标点的“zz”改为“co”。</p>
+        <p>下面几个字母串后面也有“z”，将它们全部换成“o”：</p>
+        <blockquote>zzz   ->  coo</blockquote>
+        <blockquote>zzzs  ->  coos</blockquote>
+        <blockquote>zzzy  ->  cooy</blockquote>
+        <p>带声调的a、o、e、i、u和ü原编码长度为5，不支持，因此做以下修改：</p>
+        <blockquote>zzpya  ->  copa</blockquote>
+        <blockquote>zzpye  ->  cope</blockquote>
+        <blockquote>zzpyi  ->  copi</blockquote>
+        <blockquote>zzpyo  ->  copo</blockquote>
+        <blockquote>zzpyu  ->  copu</blockquote>
+        <blockquote>zzpyv  ->  copv</blockquote>
+        <p>极点自带的“极爽词库4.3版”码表和86、98没有以“co”开头的其他词条，因此上述处理不会引起任何冲突。</p>
+        <p>新世纪版（包括单字版和词组版）在这两个词条上和符号设置重码了，汉字会显示在前面，标点跟随其后。</p>
+        <blockquote>copy 䮤</blockquote>
+        <blockquote>copi 遤 騌</blockquote>
+        <p>由于不受支持，因此删除了极点生僻字标记（如“囧”原来为“~囧”）和变量（如原来可以用“now”输出当前时间）。</p>
+        <p>词组版新世纪导入之后发现以下BUG。由于实例太少，没有弄明白是怎么回事，若发现更多类似情况，请通知作者，以找出BUG，改进程序。</p>
+        <p><img src="Images/Order_Bug.png" width="600"/></p>
+        <p><a href="mailto:xionghuaidong@163.com">xionghuaidong@163.com</a></p>
+        <p>版权所有 (c) 2014-2016 熊怀东</p>
+    </body>
+</html>
