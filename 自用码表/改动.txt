@@ -6,3 +6,6 @@ ds		厅
 dsk		厅奇
 dskf	奇
 ghyi	寸
+skd		可束
+ski		束
+ognw	炼
