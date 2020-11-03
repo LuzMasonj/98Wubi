@@ -10,3 +10,6 @@ skd		可束
 ski		束
 ognw	炼
 gus		来
+wgkr	使拿
+wgll	拿
+wglr	拿
