@@ -1,4 +1,4 @@
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=MisterGlasses&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
+[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=LuzMasonj&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
 
 # 98Wubi
  98五笔资源库自用备份
@@ -20,4 +20,4 @@
 
 ### 访问量
 
-![](http://profile-counter.glitch.me/MisterGlasses/count.svg)
+![](http://profile-counter.glitch.me/LuzMasonj/count.svg)
