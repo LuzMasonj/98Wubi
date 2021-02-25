@@ -18,3 +18,4 @@
 .uqw	次
 .uqwy	次瓷
 .def	有
+.uwyc	冷羚
